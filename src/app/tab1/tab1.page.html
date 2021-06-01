@@ -1,0 +1,66 @@
+<ion-content class="covid-home">
+  <div class="header">
+    <div class="header__title">
+      Resumen
+    </div>   
+  </div>
+  <div class="content-summary" >
+    <div class="content-summary__icon-global"></div>
+    <div class="content-summary__detail">
+      <div class="content-summary__detail__item">
+        <div class="content-summary__detail__item__title">Total de casos</div>
+        <div class="content-summary__detail__item__total">{{TotalConfirmed}}</div>
+        <div class="content-summary__detail__item__new">+{{NewConfirmed}}</div>
+      </div>
+      <div class="content-summary__detail__item">
+        <div class="content-summary__detail__item__title">Recuperados</div>
+        <div class="content-summary__detail__item__total">{{NewRecovered}}</div>
+      </div>
+      <div class="content-summary__detail__item">
+        <div class="content-summary__detail__item__title">Muertes</div>
+        <div class="content-summary__detail__item__total">{{TotalDeaths}}</div>
+        <div class="content-summary__detail__item__new">+{{NewDeaths}}</div>
+      </div>
+    </div>
+  </div>  
+  <div *ngFor="let itemC of total">
+    <div *ngIf="itemC.Country == 'Colombia'">
+  <div class="col-summary" >
+    <div class="col-summary__box" >
+      <img class="col-summary__box__flag" [src]="'https://flagcdn.com/'+itemC.CountryCode.toLocaleLowerCase()+'.svg'">
+      <div class="col-summary__box__title">Total de casos</div>
+      <div class="col-summary__box__total">{{itemC.TotalConfirmed}}</div>
+      <div class="col-summary__box__new">+{{itemC.NewConfirmed}}</div>
+    </div>
+    <div class="col-summary__box" >
+      <img class="col-summary__box__icon" src="../../assets/icon/person-add-sharp.svg" alt="">
+      <div class="col-summary__box__title">Recuperados</div>
+      <div class="col-summary__box__total">{{itemC.TotalRecovered}}</div>
+    </div>
+    <div class="col-summary__box" >
+      <img class="col-summary__box__icon" src="../../assets/icon/person-remove-sharp.svg" alt="">
+      <div class="col-summary__box__title">Muertes</div>
+      <div class="col-summary__box__total">{{itemC.TotalDeaths}}</div>
+      <div class="col-summary__box__new">+{{itemC.NewDeaths}}</div>
+    </div>
+  </div> 
+</div>
+</div>
+  <div class="countries-title">
+    <div class="countries-title__label">
+      Top Paises
+    </div>
+    <div class="countries-title__link" (click)="detailcountries()">Ver todos</div>
+  </div>
+
+  <div class="countries">
+    <div *ngFor="let itemT of countries; let i = index">
+    <div class="countries__box" >
+      <img class="countries__box__flag" [src]="'https://flagcdn.com/'+itemT.CountryCode.toLocaleLowerCase()+'.svg'">
+      <div class="countries__box__label">{{itemT.Country}}</div>
+      <div class="countries__box__new">{{itemT.TotalConfirmed}}</div>
+    </div>
+    </div>
+  </div>
+
+</ion-content>

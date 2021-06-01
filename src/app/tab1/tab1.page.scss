@@ -1,0 +1,184 @@
+.covid-home{
+background-color: var(--color-white);
+.header{
+    height:160px;
+    background-color: var(--primary);
+    padding: 16px 16px;
+    &__input{
+        outline: none;
+        color: var(--color-white);
+        border: none;
+        background-color: transparent;
+        border-bottom: solid 1px var(--color-white);
+        width: 100%;
+        line-height: 1.5;
+        margin-top: 54px;
+        &::placeholder{
+            color: var(--color-white);
+            font-size: 12px;
+            font-family: OpenSans;
+        }
+    }
+    &__title{
+        color: var(--color-white);
+        font-size: 16px;
+        font-family: OpenSans;
+        margin-top: 24px;
+        padding: 0 0 16px 0;
+    }
+
+}
+
+.content-summary{
+    margin: 16px; 
+    padding: 16px 23px 16px 16px;
+    border-radius: 12px;
+    box-shadow: 0 3px 3px 0 rgba(51,51,51, 0.1);
+    background-color: var(--color-white);
+    margin: -40px 16px;
+    &__icon-global{
+        background-image: url(../../assets/icon/global-icon.svg);
+        background-repeat: no-repeat;
+        width: 24px;
+        height: 24px;
+    }
+    &__detail{
+        margin-top: 8px;
+        display: flex;
+        justify-content: space-between;
+        &__item{
+            border-right: solid 1px #eae8f3;
+            padding-left: 12px;
+            padding-right: 12px;
+            &:last-child{
+                border-right: none;
+            }
+            &__title{
+                font-family: OpenSans;
+                font-size: 14px;
+                line-height: 1.36;
+                color: #333333;
+            }
+            &__total{
+                font-family: OpenSans;
+                font-size: 16px;
+                font-weight: 600;
+                line-height: 1.5;
+                color: #10133d;
+            }
+            &__new{
+                font-size: 12px;
+                line-height: 1.4;
+                color: #5c5c5c;
+            }
+        }
+    }
+}
+
+.col-summary{
+   display: flex;
+   margin-top: 40px;
+   padding: 16px;
+   justify-content: space-between;
+   &__box{
+       width: 112px;
+       padding: 16px 0 16px 16px;
+       border-radius: 22px;
+       background-color: rgba(6, 157, 113, 0.09);
+       &__flag{
+           width: 22px;
+           height:22px;
+           border-radius: 12px;
+           margin-bottom: 5px;
+       }
+       &__icon{
+           width: 22px;
+           height: 22px;
+           margin-bottom: 5px;
+           //margin-top: 5px;
+       }
+       &__title{
+           font-family: OpenSans;
+           font-size: 14px;
+           font-weight: 600;
+           line-height: 1.36;
+           color: #333333;
+       }
+       &__total{
+           font-family: OpenSans;
+           font-size: 16px;
+           font-weight: 600;
+           line-height: 1.5;
+           color: #10133d;
+       }
+       &__new{
+           font-family: OpenSans;
+           font-size: 12px;
+           font-weight: 600;
+           line-height: 1.4;
+           color: #5c5c5c;
+       }
+
+    }
+
+}
+
+.countries-title{
+display: flex;
+margin: 0 16px;
+font-family: OpenSans;
+justify-content: space-between;
+align-items: center;
+font-weight: 600;
+&__label {
+font-size: 16px;
+line-height: 1.5;
+color: #333333;
+}
+&__link {
+    font-size: 12px;
+    line-height: 1.5;
+    color: #069d71;
+    &:hover{
+    cursor: pointer;
+    text-decoration: underline;
+    }
+} 
+}
+.countries{
+    margin: 16px;
+    display: flex;
+    justify-content: space-between;
+    &__box{
+        width: 112px;
+        height: 160px;
+        padding: 16px 16px 16px 16px;
+        border-radius: 22px;
+        box-shadow: 0 0 6px 0 rgba(51,51,51, 0.1);
+        background-color: #ffffff;
+        &__flag{
+            width: 18px;
+            height: 18px;
+            border-radius: 9px;
+            box-shadow: 0 3px 6px 0 rgba(0,0,0, 0.16);
+            margin-bottom: 8px;
+        }
+        &__label{
+            font-family: OpenSans;
+            font-size: 16px;
+            font-weight: bold;
+            line-height: 1.38;
+            color: #10133d;
+            margin-bottom: 4px;
+        }
+        &__new{
+            font-family: OpenSans;
+            font-size: 14px;
+            font-weight: 300;
+            line-height: 1.36;
+            color: #10133d;
+        }
+    }
+}
+
+}

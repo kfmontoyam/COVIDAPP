@@ -1,0 +1,29 @@
+<ion-content class="covid-detail-countries">
+  <div class="covid-detail-countries__back" (click)="back()"></div>
+  <div class="covid-detail-countries__title">Paises</div>
+  <ion-searchbar showCancelButton="never" placeholder="Buscar" autocomplete="off" type="Search" [(ngModel)]="filterTerm" animated="true"></ion-searchbar>
+ 
+  <div class="content-summary" *ngFor="let item of countries | filter:filterTerm" >
+    <div class="content-summary__content" >
+      <div class="content-summary__content__label">{{item.Country}}</div>
+        <img class="content-summary__content__icon-flag" [src]="'https://flagcdn.com/'+item.CountryCode.toLocaleLowerCase()+'.svg'" />
+    </div>
+    <div class="content-summary__detail">
+      <div class="content-summary__detail__item">
+        <div class="content-summary__detail__item__title">Total de casos</div>
+        <div class="content-summary__detail__item__total">{{item.TotalConfirmed}}</div>
+        <div class="content-summary__detail__item__new">+{{item.NewConfirmed}}</div>
+      </div>
+      <div class="content-summary__detail__item">
+        <div class="content-summary__detail__item__title">Recuperados</div>
+        <div class="content-summary__detail__item__total">{{item.TotalRecovered}}</div>
+        <div class="content-summary__detail__item__new">+{{item.NewRecovered}}</div>
+      </div>
+      <div class="content-summary__detail__item">
+        <div class="content-summary__detail__item__title">Muertes</div>
+        <div class="content-summary__detail__item__total">{{item.TotalDeaths}}</div>
+        <div class="content-summary__detail__item__new">+{{item.NewDeaths}}</div>
+      </div>
+    </div>
+  </div>  
+</ion-content>
